@@ -1,0 +1,9 @@
+flask
+sqlalchemy
+pandas
+numpy
+scikit-learn
+python-dateutil
+pyjwt
+matplotlib
+streamlit

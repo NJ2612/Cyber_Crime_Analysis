@@ -1,0 +1,166 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 0;
+  height: 65px;
+  background: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  color: #f8fafc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: left 0.3s ease;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: #f8fafc;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-btn:hover {
+  color: #60a5fa;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #e2e8f0;
+}
+
+.user-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #334155;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-section:hover {
+  background: #475569;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background: #1e293b;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 170px;
+  animation: fadeDown 0.25s ease;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #f8fafc;
+  text-align: left;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.dropdown button:hover {
+  background: #334155;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header {
+    left: 220px;
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dropdown {
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    left: 0;
+    height: 55px;
+    padding: 0 15px;
+  }
+
+  .header-left {
+    gap: 10px;
+  }
+
+  .menu-btn {
+    font-size: 20px;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  .user-section {
+    padding: 5px 10px;
+    gap: 8px;
+  }
+
+  .user-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dropdown {
+    width: 150px;
+    top: 50px;
+  }
+
+  .dropdown button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

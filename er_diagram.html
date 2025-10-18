@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ER Diagram - Cybercrime</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  </script>
+</head>
+<body>
+  <h2 style="text-align:center;">Cybercrime Database ER Diagram</h2>
+  <pre class="mermaid">
+erDiagram
+    CRIMES {
+        int crime_id PK
+        string type
+        date date
+        string city
+        string state
+        int severity
+        string description
+        string ip_address
+    }
+    SUSPECTS {
+        int suspect_id PK
+        string name
+        int age
+        string gender
+        string address
+        string criminal_history
+    }
+    VICTIMS {
+        int victim_id PK
+        string name
+        int age
+        string gender
+        string address
+    }
+    EVIDENCE {
+        int evidence_id PK
+        int crime_id FK
+        string type
+        string description
+        string file_path
+    }
+    FORECASTS {
+        int id PK
+        string city
+        string state
+        string month
+        float risk_score
+        string label
+        datetime created_at
+    }
+
+    CRIMES ||--o{ EVIDENCE : has
+    CRIMES }o--o{ SUSPECTS : involves
+    CRIMES }o--o{ VICTIMS : affects
+  </pre>
+</body>
+</html>

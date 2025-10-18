@@ -1,0 +1,131 @@
+.profile-page {
+  padding: 30px;
+  color: #1e293b;
+}
+
+.profile-page h1 {
+  font-size: 26px;
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+.profile-page p {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 700px;
+}
+
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #2563eb;
+}
+
+.profile-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-form label {
+  font-size: 14px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.profile-form input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.profile-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 4px #3b82f6;
+}
+
+.profile-form button {
+  margin-top: 20px;
+  align-self: flex-end;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile-form button:hover {
+  background: #1e40af;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profile-page {
+    padding: 20px;
+  }
+
+  .profile-card {
+    padding: 25px;
+    gap: 20px;
+    max-width: 600px;
+  }
+
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 15px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+    gap: 15px;
+  }
+
+  .profile-page h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-form {
+    width: 100%;
+  }
+
+  .profile-form input {
+    font-size: 16px; /* Prevent zoom */
+  }
+
+  .profile-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
